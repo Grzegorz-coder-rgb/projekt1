@@ -1,0 +1,19 @@
+import turtle
+t = turtle.Turtle()
+
+def spirala(bok, kolor, speed):
+    kat = 299
+    t.speed(speed)  # Ustawienie prędkości żółwia
+    while bok > 0:
+        t.color(kolor)  # Używamy 't', nie 'turtle'
+        t.forward(bok)
+        t.right(kat)
+        bok -= 0.1
+
+# Pobieranie danych od użytkownika
+bok = int(input("Podaj dlugosc boku: "))
+kolor = input("Podaj kolor: ")
+speed = int(input("Podaj prędkość (1-100): "))  # Dodane pobieranie prędkości
+
+# Wywołanie funkcji spirala
+spirala(bok, kolor, speed)
